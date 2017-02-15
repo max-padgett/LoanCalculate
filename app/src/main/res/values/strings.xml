@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoanCalculate</string>
+    <string name="Loan$">Loan</string>
+    <string name="Interest">Interest Rate</string>
+    <string name="year5">5/yrs</string>
+    <string name="edit_message">0.00$</string>
+    <string name="edit_message2">0.00%</string>
+    <string name="year10">10/yrs</string>
+    <string name="year15">15/yrs</string>
+    <string name="year20">20/yrs</string>
+    <string name="year25">25/yrs</string>
+    <string name="year30">30/yrs</string>
+</resources>
