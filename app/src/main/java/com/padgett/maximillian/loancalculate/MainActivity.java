@@ -3,6 +3,8 @@ package com.padgett.maximillian.loancalculate;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -47,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         interestRET.addTextChangedListener(interestRateTextWatcher);
 
 
-
     }
 
     private TextWatcher loanTextWatcher = new TextWatcher() {
@@ -58,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            try{
-                userLoan.setLoanAmount((double)Double.parseDouble(s.toString()));
-            }catch (NumberFormatException e){
+            try {
+                userLoan.setLoanAmount((double) Double.parseDouble(s.toString()));
+            } catch (NumberFormatException e) {
                 userLoan.setLoanAmount(0.0);
             }
             displayMonthly();
@@ -68,7 +69,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-
+            try {
+                double val = Double.parseDouble(s.toString());
+                if(val > 100000000000000.00) {
+                    s.replace(0, s.length(), "9999999999999.99", 0, 16);
+                } else if(val < 0) {
+                    s.replace(0, s.length(), "0", 0, 1);
+                }
+            } catch (NumberFormatException ex) {
+                // Do something
+                userLoan.setInterestRate(0.0);
+            }
         }
     };
 
@@ -80,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            try{
+            try {
                 userLoan.setInterestRate((double)
                         Double.parseDouble(s.toString()));
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 userLoan.setInterestRate(0.0);
             }
             displayMonthly();
@@ -91,11 +102,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-
+            try {
+                double val = Double.parseDouble(s.toString());
+                if(val > 99.99) {
+                    s.replace(0, s.length(), "99", 0, 2);
+                } else if(val < 0) {
+                    s.replace(0, s.length(), "0", 0, 1);
+                }
+            } catch (NumberFormatException ex) {
+                // Do something
+                userLoan.setInterestRate(0.0);
+            }
         }
-    };
+        };
 
-    private void displayMonthly(){
+        private void displayMonthly() {
             userLoan.calc();
             year5.setText("$" + String.format("%.02f", userLoan.getMonthly(0)));
             year10.setText("$" + String.format("%.02f", userLoan.getMonthly(1)));
@@ -103,5 +124,6 @@ public class MainActivity extends AppCompatActivity {
             year20.setText("$" + String.format("%.02f", userLoan.getMonthly(3)));
             year25.setText("$" + String.format("%.02f", userLoan.getMonthly(4)));
             year30.setText("$" + String.format("%.02f", userLoan.getMonthly(5)));
-    }
+        }
+
 }
