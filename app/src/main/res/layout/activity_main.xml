@@ -41,7 +41,8 @@
         android:id="@+id/textView"
         android:layout_above="@+id/editText3"
         android:layout_toRightOf="@+id/editText2"
-        android:layout_toEndOf="@+id/editText2" />
+        android:layout_toEndOf="@+id/editText2"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year5"
@@ -52,7 +53,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="55dp"
         android:id="@+id/textView3"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="false" />
 
     <TextView
         android:text="@string/Interest"
@@ -61,17 +64,8 @@
         android:layout_alignBottom="@+id/editText3"
         android:layout_toRightOf="@+id/editText3"
         android:layout_toEndOf="@+id/editText3"
-        android:id="@+id/textView4" />
-
-    <TextView
-        android:text="@string/year10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView6"
-        android:textSize="30sp" />
+        android:id="@+id/textView4"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year15"
@@ -81,17 +75,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/textView7"
-        android:textSize="30sp" />
-
-    <TextView
-        android:text="@string/year20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView8"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <TextView
         android:text="@string/year25"
@@ -101,7 +86,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/textView9"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <TextView
         android:text="@string/year30"
@@ -111,7 +97,8 @@
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <TextView
         android:text="@string/year5Dec"
@@ -121,7 +108,8 @@
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year10Dec"
@@ -131,7 +119,8 @@
         android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year15Dec"
@@ -141,7 +130,8 @@
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year20Dec"
@@ -151,7 +141,8 @@
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignBottom="@+id/textView8"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year25Dec"
@@ -161,7 +152,8 @@
         android:layout_alignBaseline="@+id/textView9"
         android:layout_alignBottom="@+id/textView9"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/year30Dec"
@@ -171,6 +163,57 @@
         android:layout_alignBaseline="@+id/textView10"
         android:layout_alignBottom="@+id/textView10"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="@string/year10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="30sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="@string/year20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:textSize="30sp"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="@string/MonthlyP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/FiretruckRed" />
+
+    <TextView
+        android:text="@string/exYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView17"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/FiretruckRed" />
+
+    <View style="@style/Divider"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
